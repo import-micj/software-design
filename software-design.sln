@@ -43,9 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubbleSort-Procedural", "Bu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sort-Decending", "Sort-Decending\Sort-Decending.csproj", "{D5744233-662C-40FD-804C-932F06C18E65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciRecursion", "FibonacciRecursion\FibonacciRecursion.csproj", "{B54EB02D-D98F-46D2-BFEE-B91C49D1864B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FibonacciRecursion", "FibonacciRecursion\FibonacciRecursion.csproj", "{B54EB02D-D98F-46D2-BFEE-B91C49D1864B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExponentRecursion", "ExponentRecursion\ExponentRecursion.csproj", "{5459DFE9-1144-4717-B718-6160311414E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExponentRecursion", "ExponentRecursion\ExponentRecursion.csproj", "{5459DFE9-1144-4717-B718-6160311414E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
