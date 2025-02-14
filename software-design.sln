@@ -47,6 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FibonacciRecursion", "Fibon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExponentRecursion", "ExponentRecursion\ExponentRecursion.csproj", "{5459DFE9-1144-4717-B718-6160311414E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{20B432E9-4B66-4E2E-A2C7-9265EA7CCE73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{5459DFE9-1144-4717-B718-6160311414E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5459DFE9-1144-4717-B718-6160311414E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5459DFE9-1144-4717-B718-6160311414E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B432E9-4B66-4E2E-A2C7-9265EA7CCE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B432E9-4B66-4E2E-A2C7-9265EA7CCE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B432E9-4B66-4E2E-A2C7-9265EA7CCE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B432E9-4B66-4E2E-A2C7-9265EA7CCE73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +129,7 @@ Global
 		{D5744233-662C-40FD-804C-932F06C18E65} = {A6555F1A-B1AA-4432-BEFA-4312196DC09E}
 		{B54EB02D-D98F-46D2-BFEE-B91C49D1864B} = {EE8739D9-DF08-4912-B8A2-6C11174F84E9}
 		{5459DFE9-1144-4717-B718-6160311414E6} = {EE8739D9-DF08-4912-B8A2-6C11174F84E9}
+		{20B432E9-4B66-4E2E-A2C7-9265EA7CCE73} = {91991023-A88C-4C94-81EC-F2163B40F27F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CACC9D6-DA0E-4BAF-B290-8F083C750B50}
