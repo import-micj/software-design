@@ -1,10 +1,63 @@
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
+
+
 namespace lab5
 {
-	public partial class Form1 : Form
-	{
-		public Form1()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        public class Author
+        {
+            public int AuthorID { get; set; }
+
+            public string Name { get; set; }
+            public virtual ICollection<Book> Books { get; set; }
+        }
+
+        public class Book
+        {
+            public int BookID { get; set; }
+            public string Title { get; set; }
+            public int AuthorID { get; set; }
+            public virtual Author Author { get; set; }
+        }
+
+        public void AddAuthorWithBook(string authorName, string bookTitle)
+        {
+            using (var context = new BookstoreContext())
+            {
+                var author = new Author { Name = authorName };
+                var book = new Book { Title = bookTitle, Author = author };
+
+                context.Authors.Add(author);
+                context.Books.Add(book);
+                context.SaveChanges();
+            }
+        }
+
+        public List<string> GetBooksWithAuthors()
+        {
+            using (var context = new BookstoreContext())
+            {
+                var booksWithAuthors = context.Books
+                    .Include(b => b.Author)
+                    .Select(b => $"{b.Title} by {b.Author.Name}")
+                    .ToList();
+
+                return booksWithAuthors;
+            }
+        }
+
+        private void btnShowBooks_Click(object sender, EventArgs e)
+        {
+            var books = GetBooksWithAuthors();
+            listBoxBooks.DataSource = books;
+        }
+    }
 }
+ 

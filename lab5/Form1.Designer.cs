@@ -20,20 +20,134 @@
 			base.Dispose(disposing);
 		}
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		///  Required method for Designer support - do not modify
-		///  the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "Form1";
-		}
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            txtAuthorName = new TextBox();
+            txtBookTitle = new TextBox();
+            btnAddBook = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            listBoxBooks = new ListBox();
+            label3 = new Label();
+            btnShowBooks = new Button();
+            label4 = new Label();
+            SuspendLayout();
+            // 
+            // txtAuthorName
+            // 
+            txtAuthorName.Location = new Point(106, 95);
+            txtAuthorName.Name = "txtAuthorName";
+            txtAuthorName.Size = new Size(128, 23);
+            txtAuthorName.TabIndex = 0;
+            // 
+            // txtBookTitle
+            // 
+            txtBookTitle.Location = new Point(106, 124);
+            txtBookTitle.Name = "txtBookTitle";
+            txtBookTitle.Size = new Size(128, 23);
+            txtBookTitle.TabIndex = 1;
+            // 
+            // btnAddBook
+            // 
+            btnAddBook.Location = new Point(133, 153);
+            btnAddBook.Name = "btnAddBook";
+            btnAddBook.Size = new Size(75, 23);
+            btnAddBook.TabIndex = 2;
+            btnAddBook.Text = "Add Book";
+            btnAddBook.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(56, 98);
+            label1.Name = "label1";
+            label1.Size = new Size(44, 15);
+            label1.TabIndex = 3;
+            label1.Text = "Author";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(40, 127);
+            label2.Name = "label2";
+            label2.Size = new Size(60, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Book Title";
+            // 
+            // listBoxBooks
+            // 
+            listBoxBooks.FormattingEnabled = true;
+            listBoxBooks.ItemHeight = 15;
+            listBoxBooks.Location = new Point(351, 95);
+            listBoxBooks.Name = "listBoxBooks";
+            listBoxBooks.Size = new Size(209, 169);
+            listBoxBooks.TabIndex = 5;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(351, 73);
+            label3.Name = "label3";
+            label3.Size = new Size(74, 15);
+            label3.TabIndex = 6;
+            label3.Text = "List of Books";
+            // 
+            // btnShowBooks
+            // 
+            btnShowBooks.Location = new Point(398, 270);
+            btnShowBooks.Name = "btnShowBooks";
+            btnShowBooks.Size = new Size(118, 23);
+            btnShowBooks.TabIndex = 7;
+            btnShowBooks.Text = "Show Books";
+            btnShowBooks.UseVisualStyleBackColor = true;
+            btnShowBooks.Click += btnShowBooks_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            label4.Location = new Point(133, 59);
+            label4.Name = "label4";
+            label4.Size = new Size(78, 20);
+            label4.TabIndex = 8;
+            label4.Text = "Add Book";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(label4);
+            Controls.Add(btnShowBooks);
+            Controls.Add(label3);
+            Controls.Add(listBoxBooks);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(btnAddBook);
+            Controls.Add(txtBookTitle);
+            Controls.Add(txtAuthorName);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
+        }
 
-		#endregion
-	}
+        #endregion
+
+        private TextBox txtAuthorName;
+        private TextBox txtBookTitle;
+        private Button btnAddBook;
+        private Label label1;
+        private Label label2;
+        private ListBox listBoxBooks;
+        private Label label3;
+        private Button btnShowBooks;
+        private Label label4;
+    }
 }
