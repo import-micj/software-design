@@ -33,7 +33,6 @@ namespace lab5
             {
                 var author = new Author { Name = authorName };
                 var book = new Book { Title = bookTitle, Author = author };
-
                 context.Authors.Add(author);
                 context.Books.Add(book);
                 context.SaveChanges();
@@ -48,7 +47,6 @@ namespace lab5
                     .Include(b => b.Author)
                     .Select(b => $"{b.Title} by {b.Author.Name}")
                     .ToList();
-
                 return booksWithAuthors;
             }
         }
@@ -57,6 +55,34 @@ namespace lab5
         {
             var books = GetBooksWithAuthors();
             listBoxBooks.DataSource = books;
+        }
+
+        public void UpdateBookAndAuthor(int bookId, string newTitle, string newAuthorName)
+        {
+            using (var context = new BookstoreContext())
+            {
+                var book = context.Books.Include(b => b.Author).FirstOrDefault(b => b.BookID == bookId);
+
+                if (book != null)
+                {
+                    book.Title = newTitle;
+                    book.Author.Name = newAuthorName;
+                    context.SaveChanges();
+                }
+            }
+        }
+
+
+        private void btnUpdateBook_Click(object sender, EventArgs e)
+        {
+            int bookId = int.Parse(txtBookID.Text);
+            UpdateBookAndAuthor(bookId, txtBookTitle.Text, txtAuthorName.Text);
+            MessageBox.Show("Book and Author updated successfully.");
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+            AddAuthorWithBook(txtAuthorName.Text, txtBookTitle.Text);
         }
     }
 }
